@@ -1,0 +1,100 @@
+﻿<Window x:Class="ExpenseTracker.Windows.AddExpenseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpenseTracker.Windows"
+        mc:Ignorable="d"
+        Title="Add Expense" Height="450" Width="800"
+        Icon="/Resources/add-expense.ico">
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryBlueColor" Color="#304FFE"/>
+        <SolidColorBrush x:Key="PrimaryTextColor" Color="#FFFFFF"/>
+
+        <SolidColorBrush x:Key="ButtonMouseOverColor" Color="#0026CA"/>
+
+        <SolidColorBrush x:Key="ButtonPressedColor" Color="#7A7CFF"/>
+
+        <!-- Start: PrimaryButtonStyle-->
+        <Style x:Key="PrimaryButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{DynamicResource PrimaryBlueColor}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}" />
+            <Setter Property="FontWeight" Value="Medium" />
+            <Setter Property="Padding" Value="8 3 8 3" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="MaxHeight" Value="40" />
+            <Setter Property="Width" Value="Auto" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="btnBorder" CornerRadius="5"
+                            Background="{TemplateBinding Background}"
+                            Width="{TemplateBinding Width}"
+                            MaxHeight="{TemplateBinding MaxHeight}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="True"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="ContentPresenter" Focusable="False"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          RecognizesAccessKey="True" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="btnBorder" Property="Background"
+                                    Value="{DynamicResource ButtonMouseOverColor}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="btnBorder" Property="Background"
+                                    Value="{DynamicResource ButtonPressedColor}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- End: PrimaryButtonStyle-->
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Category:" Margin="5"/>
+        <ComboBox x:Name="categoryComboBox" Grid.Row="0" Grid.Column="1" Margin="5" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Amount:" Margin="5"/>
+        <TextBox x:Name="amountTextBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Date:" Margin="5"/>
+        <DatePicker x:Name="datePicker" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Description:" Margin="5"/>
+        <TextBox x:Name="descriptionTextBox" Grid.Row="3" Grid.Column="1" Margin="5"  Grid.RowSpan="2" AcceptsReturn="True" TextWrapping="Wrap"/>
+
+        <Button x:Name="saveButton"
+                Style="{DynamicResource PrimaryButtonStyle}"
+                Grid.Row="5" 
+                Grid.Column="1" 
+                Content="Save" 
+                Margin="7" 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Click="saveButton_Click"/>
+    </Grid>
+</Window>
