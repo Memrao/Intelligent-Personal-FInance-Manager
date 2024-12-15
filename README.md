@@ -1,54 +1,49 @@
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![DotNet](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
-![CSHARP](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![Udemy](https://img.shields.io/badge/Udemy-EC5252?style=for-the-badge&logo=Udemy&logoColor=white)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/ArtemZarubin/Expense-Tracker)
-![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/ArtemZarubin/Expense-Tracker)
-![GitHub](https://img.shields.io/github/license/ArtemZarubin/Expense-Tracker)
+# Intelligent Personal Finance Manager 📊💰
 
-
-# Expense Tracker 📊💰
-
-Expense Tracker is a user-friendly application designed to help you manage and track your personal expenses efficiently.
+**Intelligent Personal Finance Manager** is a user-friendly application I developed to help individuals efficiently manage and track their personal finances. It offers robust features for categorizing, recording, and analyzing expenses, empowering users to make smarter financial decisions.
 
 ## Features
 
-- **Record Expenses**: Easily record your daily expenses with details including category, amount, date, and description.
-- **Categorize Expenses**: Categorize your expenses to better understand where your money goes.
-- **Visualize Data**: View your spending habits over time with interactive charts and graphs.
-- **Flexible Filtering**: Filter expenses by date range to analyze spending patterns.
-- **Database Integration**: Seamlessly integrates with a database to store and retrieve expense records.
+- **Record Expenses**: Effortlessly add daily expenses with details such as category, amount, date, and description.
+- **Categorize Expenses**: Organize expenses into categories to gain insights into spending habits.
+- **Visualize Data**: Interactive charts and graphs make it easy to understand spending trends.
+- **Flexible Filtering**: Filter expenses by date range to analyze specific periods.
+- **Database Integration**: Ensures all financial data is securely stored and retrieved using a database.
 
 ## Getting Started
 
+### Prerequisites
+- Windows OS
+- Visual Studio (with .NET Framework support)
+- SQL Server / SQL Server Management Studio (SSMS)
+
+### Installation
+
 1. **Clone the repository**:
-git clone https://github.com/ArtemZarubin/Expense-Tracker.git
+   ```bash
+   git clone https://github.com/your-username/Intelligent-Personal-Finance-Manager.git
+   ```
 
 2. **Set up the Database**:
-   - Ensure you have SQL Server Management Studio (SSMS) installed.
-   - Execute the SQL scripts provided in [`DatabaseScripts`](DatabaseScripts/create_database.sql) folder to set up the database schema. 🛠️
+   - Open SQL Server Management Studio (SSMS).
+   - Run the SQL scripts available in the [`DatabaseScripts`](DatabaseScripts/create_database.sql) folder to set up the database schema.
 
 3. **Build and Run**:
-   - Open the solution file `ExpenseTracker.sln` in Visual Studio.
-   - Build and run the application. 🚀
+   - Open `IntelligentPersonalFinanceManager.sln` in Visual Studio.
+   - Build the solution and run the application. 🚀
 
-4. **Usage**:
-   - Add new expenses using the "Add Expense" button.
-   - Edit or delete expenses using the corresponding buttons in the expense list.
-   - Analyze your expenses using the pie chart and histogram features. 📈
+### Usage
+- **CRUD**: complete crud operations.
+- **Add Expense**: Use the "Add Expense" button to record a new expense.
+- **Edit/Delete Expense**: Modify or delete entries directly from the expense list.
+- **Analyze Data**: Utilize the pie chart and histogram features to visualize expense trends.
 
-5. **Contributing**:
-   - Fork the repository, make improvements, and submit pull requests.
-   - Report any issues or suggest enhancements using GitHub issues. 🤝
 
 ## Technologies Used
 
-- C# / .NET Framework
-- WPF (Windows Presentation Foundation)
-- Entity Framework (EF) for database operations
-- SQL Server / SQL Server Management Studio (SSMS)
-- Git / GitHub for version control
+- **C#** / **.NET Framework**: Core application logic
+- **WPF (Windows Presentation Foundation)**: For creating a responsive and user-friendly UI
+- **Entity Framework (EF)**: For managing database operations
+- **SQL Server**: Backend database
+- **Git/GitHub**: Version control and collaboration
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
