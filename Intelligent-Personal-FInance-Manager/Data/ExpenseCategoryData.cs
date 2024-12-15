@@ -7,7 +7,7 @@ namespace ExpenseTracker.Data
         private string _category;
         private double _amount;
 
-        // Encapsulation with validation for Category
+        // Encapsulation with validation for Category   
         public string Category
         {
             get => _category;
