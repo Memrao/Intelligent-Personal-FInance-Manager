@@ -21,7 +21,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/Intelligent-Personal-Finance-Manager.git
+   git clone https://github.com/Memrao/Intelligent-Personal-FInance-Manager
    ```
 
 2. **Set up the Database**:
@@ -33,11 +33,10 @@
    - Build the solution and run the application. 🚀
 
 ### Usage
-- **CRUD**: complete crud operations.
+- **CRUD**: Perform complete Create, Read, Update, and Delete operations.
 - **Add Expense**: Use the "Add Expense" button to record a new expense.
 - **Edit/Delete Expense**: Modify or delete entries directly from the expense list.
 - **Analyze Data**: Utilize the pie chart and histogram features to visualize expense trends.
-
 
 ## Technologies Used
 
@@ -45,5 +44,8 @@
 - **WPF (Windows Presentation Foundation)**: For creating a responsive and user-friendly UI
 - **Entity Framework (EF)**: For managing database operations
 - **SQL Server**: Backend database
+- **T-SQL Scripts for Database Setup
 - **Git/GitHub**: Version control and collaboration
 
+### Database Overview
+The application’s database is implemented using **T-SQL** for efficient data storage and querying.
