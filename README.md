@@ -44,7 +44,7 @@
 - **WPF (Windows Presentation Foundation)**: For creating a responsive and user-friendly UI
 - **Entity Framework (EF)**: For managing database operations
 - **SQL Server**: Backend database
-- **T-SQL Scripts for Database Setup
+- **T-SQL Scripts**: for Database Setup
 - **Git/GitHub**: Version control and collaboration
 
 ### Database Overview
